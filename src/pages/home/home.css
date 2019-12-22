@@ -15,7 +15,7 @@
 
 .App-header {
   /* background-color: #282c34; */
-  background: #fff url('./images/52.jpg') center center fixed no-repeat;
+  background: #fff url('../../images/52.jpg') center center fixed no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
