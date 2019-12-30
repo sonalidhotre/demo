@@ -58,12 +58,10 @@ class Demo extends Component {
       <MenuWrap wait={20} side={this.state.side}>
         <Menu id={'slide'} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} right={this.state.side === 'right'}>
           <ul>
-            <li><Link key="0" to="/"><i className="fa fa-fw" /><span>Home</span></Link></li>
-            <li><Link key="1" to="/login"><i className="fa fa-fw" /><span>Login</span></Link></li>
-            <li><Link key="2" to="/register"><i className="fa fa-fw" /><span>Register</span></Link></li>
-            <li><Link key="3" to=""><i className="fa fa-fw" /><span>Comments</span></Link></li>
-            <li><Link key="4" to=""><i className="fa fa-fw" /><span>Analytics</span></Link></li>
-            <li><Link key="5" to=""><i className="fa fa-fw" /><span>Reading List</span></Link></li>
+            <li><Link key="0" to="/"><i className="fa fa-fw" /><span>मुख्यपृष्ठ</span></Link></li>
+            <li><Link key="1" to="/login"><i className="fa fa-fw" /><span>लॉगिन</span></Link></li>
+            <li><Link key="2" to="/register"><i className="fa fa-fw" /><span>मुख्यपृष्ठ</span></Link></li>
+            <li><Link key="3" to="/contentIndex"><i className="fa fa-fw" /><span>अनुक्रमणिका</span></Link></li>
           </ul>
         </Menu>
       </MenuWrap>

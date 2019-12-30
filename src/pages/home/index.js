@@ -10,12 +10,10 @@ class Home extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="welcome-text">Welcome</div>
+          <div className="welcome-text">नमस्कार</div>
         </header>
-        <div className="intro-text">We are making website
-        for deaf and mute students, their parents and teachers.
-        The motive behind making this website is we want to make their learning
-      experience easy and fun.</div>
+        <div className="intro-text">आम्ही हि वेबसाईट मूक-बधिर मुले, त्यांचे शिक्षक आणि त्यांचा पालकांसाठी बनवत आहोत.
+        हि वेबसाईट बनवण्यामागे कारण हे आहे कि आम्हाला त्यांचा शैक्षणिक अनुभव सुखद आणि सोईस्कर बनवायचा आहे.</div>
       </div>
     );
   }

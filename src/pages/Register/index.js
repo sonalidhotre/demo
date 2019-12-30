@@ -17,7 +17,6 @@ class Register extends Component {
   }
 
   handleSubmit = () => {
-    console.log('>>', this.state)
     let path = `/login`;
     this.props.history.push(path);
   }
@@ -26,24 +25,24 @@ class Register extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="login-text">Register
+          <div className="login-text">नोंदणी
             <div className="form-class">
               <div className="text-box-wrapper">
-                <input id="uname" type="text" value={this.state.uname} placeholder="uname"
+                <input id="uname" type="text" value={this.state.uname} placeholder="वापरकर्ताचे नाव"
                   onChange={this.handleChange} />
               </div>
               <div className="text-box-wrapper">
-                <input id="email" type="text" value={this.state.email} placeholder="email"
+                <input id="email" type="text" value={this.state.email} placeholder="ईमेल"
                   onChange={this.handleChange} />
               </div>
               <div className="text-box-wrapper">
-                <input id="password" type="password" value={this.state.password} placeholder="password"
+                <input id="password" type="password" value={this.state.password} placeholder="पासवर्ड"
                   onChange={this.handleChange} />
               </div>
               <button className="button"
                 style={{ verticalAlign: "middle" }}
                 onClick={this.handleSubmit}
-              ><span>Submit </span></button>
+              ><span>नोंदणी करा </span></button>
             </div>
           </div>
         </header>

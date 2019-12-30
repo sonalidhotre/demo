@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.slide-container {
+  width: 70%;
+  margin: auto; 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.colors-header {
+  /* background-color: #282c34; */
+  background: #fff url('../../images/colors.jpg') center center fixed no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  position: relative;
+  /* color: white; */
+}
+
+.welcome-text {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  vertical-align: middle;
+  padding: 20% 0;
+  width: 100%;
+  font-size:10vw;
+  font-family: monospace;
+  font-variant-caps: small-caps;
+}
+
+.intro-text {
+  position: absolute;
+  text-align: center;
+  padding: 30% 0%;
+  width: 100%;
+  font-size: 30px;
+  font-family: monospace;
+  font-feature-settings: "c2sc";
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  margin: 1.5em;
+  font-size: 24px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  height: 300px;
+  max-width: 960px;
+  margin: 15px auto;
+  overflow: hidden;
+  touch-action: pan-y;
+  background-color: rgb(201, 196, 196);
+  /* box-shadow: inset 0 0 10px #000000; */
+  border-left: 6px solid red;
+  border-right: 6px solid red;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-card {
+  flex: 0 0 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-card-inner {
+  position: relative;
+  flex-direction: column;
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px rgb(105, 103, 103);
+}
+
+.carousel-title {
+  /* margin-top: 20px; */
+  font-size: 80px;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+}
+
+.video-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-text {
+  margin: 5%;
+  height: 70%;
+  padding: 1em;
+  font-size: 14px;
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: sans-serif;
+  /* background-color: black; */text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
