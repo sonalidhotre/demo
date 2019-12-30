@@ -13,9 +13,9 @@
   }
 }
 
-.header {
+.index-header {
   /* background-color: #282c34; */
-  background: #fff url('../../images/52.jpg') center center fixed no-repeat;
+  background: #fff url('../../images/index.jpg') center center fixed no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -27,9 +27,9 @@
   /* color: white; */
 }
 
-.welcome-text {
+.index-text {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
   text-align: center;
   vertical-align: middle;
   padding: 20% 0;
@@ -37,6 +37,7 @@
   font-size:10vw;
   font-family: monospace;
   font-variant-caps: small-caps;
+  text-shadow: 5px 5px 5px grey;
 }
 
 .half {
@@ -76,7 +77,7 @@
   width: 70%;
     margin: 20px;
     border-radius: 50px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .color-title .title {
 	font-size: 100px;
@@ -100,7 +101,7 @@
   width: 70%;
     margin: 20px;
     border-radius: 50px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .shape-title .title {
 	font-size: 100px;
@@ -124,7 +125,7 @@
   width: 70%;
     margin: 20px;
     border-radius: 50px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2), 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 .alpha-title .title {
 	font-size: 100px;
@@ -137,57 +138,77 @@
   text-transform: uppercase;
   font-weight: bolder;
 }
-.chapter-title-container{
-  position: relative;
-    height: 200px;
-    width: 60%;
-    margin: 5% 5%;
-    border-radius: 50px 20px;
+.number-title {
+	background: url(../../images/numbers.jpg) no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 20px;
+  float: right;
+  width: 70%;
+    margin: 20px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.chapter-title-container .color-chapter-title {
-  position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    padding: 5% 0%;
-    /* margin: 5% 0%; */
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    font-size: 100px;
-    font-family: monospace;
-    font-feature-settings: "c2sc";
-    font-weight: 900;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
+.number-title .title {
+	font-size: 100px;
+	font-family: Anton, sans-serif;
+	text-align: center;
+	-webkit-transition: text-shadow 1s ease;
+	text-shadow: 0 0 1px rgba(0,0,0,.2);
+	margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
-.chapter-title-container{
-  position: relative;
-  height: 200px;
-    width: 65%;
-    margin: 10px 10px;
-    border-radius: 50px 20px;
+.alphabets-title {
+	background: url(../../images/english-alphabet.jpg) no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 20px;
+  float: left;
+  width: 70%;
+    margin: 20px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.chapter-title-container .shape-chapter-title {
-  position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    padding: 5% 0%;
-    /* margin: 5% 0%; */
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    font-size: 100px;
-    font-family: monospace;
-    font-feature-settings: "c2sc";
-    font-weight: 900;
-    color: rgba(0, 0, 0, 0.6);
-    background: rgba(255, 255, 255, 0.6);
+.alphabets-title .title {
+	font-size: 100px;
+	font-family: Anton, sans-serif;
+	text-align: center;
+	-webkit-transition: text-shadow 1s ease;
+	text-shadow: 0 0 1px rgba(0,0,0,.5);
+	margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.nums-title {
+	background: url(../../images/eng-numbers.jpg) no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 20px;
+  float: right;
+  width: 70%;
+    margin: 20px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.nums-title .title {
+	font-size: 100px;
+	font-family: Anton, sans-serif;
+	text-align: center;
+	-webkit-transition: text-shadow 1s ease;
+	text-shadow: 0 0 1px rgba(0,0,0,.5);
+	margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .App-link {

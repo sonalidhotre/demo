@@ -53,14 +53,14 @@ class Demo extends Component {
 
   getMenu() {
     const Menu = BurgerMenu['slide'];
-
+    
     return (
       <MenuWrap wait={20} side={this.state.side}>
         <Menu id={'slide'} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} right={this.state.side === 'right'}>
           <ul>
             <li><Link key="0" to="/"><i className="fa fa-fw" /><span>मुख्यपृष्ठ</span></Link></li>
             <li><Link key="1" to="/login"><i className="fa fa-fw" /><span>लॉगिन</span></Link></li>
-            <li><Link key="2" to="/register"><i className="fa fa-fw" /><span>मुख्यपृष्ठ</span></Link></li>
+            <li><Link key="2" to="/register"><i className="fa fa-fw" /><span>नोंदणी</span></Link></li>
             <li><Link key="3" to="/contentIndex"><i className="fa fa-fw" /><span>अनुक्रमणिका</span></Link></li>
           </ul>
         </Menu>

@@ -34,9 +34,9 @@ function CarouselContainer(props) {
 const Container = touchWithMouseHOC(CarouselContainer)
 
 class Colors extends Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   renderCard(index, modIndex, cursor, isTitle) {
     console.log('>>>', isTitle)
@@ -55,7 +55,7 @@ class Colors extends Component {
         >
           {isTitle
             ?
-            <div className='carousel-title'>{item.title}</div>
+            <div className='color-carousel-title'>{item.title}</div>
             :
             <div className='video-container'>
               {item.title === "लाल"

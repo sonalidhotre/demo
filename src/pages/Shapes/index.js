@@ -34,9 +34,9 @@ function CarouselContainer(props) {
 const Container = touchWithMouseHOC(CarouselContainer)
 
 class Shapes extends Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   renderCard(index, modIndex, cursor, isTitle) {
     console.log('>>>', isTitle)
@@ -46,7 +46,7 @@ class Shapes extends Component {
     return (
       <div key={index} className='carousel-card'>
         <div
-          className='carousel-card-inner'
+          className='shape-carousel-card-inner'
           style={{
             backgroundColor: item.background,
             transform: `rotate(${rotate}deg)`,
@@ -55,7 +55,7 @@ class Shapes extends Component {
         >
           {isTitle
             ?
-            <div className='carousel-title'>{item.title}</div>
+            <div className='shapes-carousel-title'>{item.title}</div>
             :
             <div className='video-container'>
               {item.title === "वर्तुळ"
