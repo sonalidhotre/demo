@@ -27,10 +27,6 @@ function CarouselContainer(props) {
 const Container = touchWithMouseHOC(CarouselContainer)
 
 class Numbers extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
   renderCard(index, modIndex, cursor) {
     const item = numbers[modIndex]
     const rotate = 40 * (index + cursor)

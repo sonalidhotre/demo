@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -104,7 +104,7 @@
 .App-header .login-text .form-class .link-wrapper a:active {
   text-decoration: underline;
 }
-.intro-text {
+/* .intro-text {
   position: absolute;
   text-align: center;
   padding: 30% 0%;
@@ -112,7 +112,7 @@
   font-size: 30px;
   font-family: monospace;
   font-feature-settings: "c2sc";
-}
+} */
 
 .App-link {
   color: #61dafb;

@@ -3,10 +3,6 @@ import './home.css';
 import namaste from '../../images/namaste.png'
 
 class Home extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
   render() {
     return (
       <div className="App">

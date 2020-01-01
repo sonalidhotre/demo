@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -13,11 +13,17 @@
   }
 }
 
-.App-header {
+label {
+  font-size: 25px;
+  color: grey;
+  margin: 0 35px;
+}
+
+.Register-header {
   /* background-color: #282c34; */
   background: #fff url('../../images/52.jpg') center center fixed no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,8 +33,9 @@
   /* color: white; */
 }
 
-.App-header .register-text {
+.Register-header .register-text {
   position: absolute;
+  top: 0;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   vertical-align: middle;
@@ -40,19 +47,19 @@
   font-variant-caps: small-caps;
 }
 
-.App-header .login-text .form-class{
+.Register-header .register-text .form-class{
   position: relative;
 }
-.App-header .login-text .form-class .text-box-wrapper {}
-.App-header .login-text .form-class .text-box-wrapper input[type=text],input[type=password] {
+.Register-header .register-text .form-class .text-box-wrapper {}
+.Register-header .register-text .form-class .text-box-wrapper input[type=text],input[type=password] {
   border: none;
   border-bottom: 2px solid black;
   padding: 15px;
   font-size: large;
   width: 50%;
 }
-.App-header .login-text .form-class .button {
-  display: inline-block;
+.Register-header .register-text .form-class .button {
+  display: block;
     border-radius: 4px;
     background-color: black;
     border: none;
@@ -63,15 +70,18 @@
     width: 20%;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+    margin: 35px 40%;
 }
-.App-header .login-text .form-class .button span {
+.Register-header .register-text .form-class .button-disabled {
+  background-color: grey !important;
+}
+.Register-header .register-text .form-class .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-.App-header .login-text .form-class .button span:after {
+.Register-header .register-text .form-class .button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -79,15 +89,15 @@
   right: -20px;
   transition: 0.5s;
 }
-.App-header .login-text .form-class .button:hover span {
+.Register-header .register-text .form-class .button:hover span {
   padding-right: 25px;
 }
-.App-header .login-text .form-class .button:hover span:after {
+.Register-header .register-text .form-class .button:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-.intro-text {
+/* .intro-text {
   position: absolute;
   text-align: center;
   padding: 30% 0%;
@@ -95,7 +105,7 @@
   font-size: 30px;
   font-family: monospace;
   font-feature-settings: "c2sc";
-}
+} */
 
 .App-link {
   color: #61dafb;

@@ -1,0 +1,24 @@
+.quiz-super-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.quiz-wrapper {
+  position: absolute;
+  background-color: lightgrey;
+  height: 280px;
+  border: 15px double black;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  opacity: 35%;
+}
+
+.quiz-wrapper img{
+  position: absolute;
+  top: -22.5%;
+  left: 20%;
+  border: 1px solid gray;
+  box-shadow: 5px 5px 2px grey;
+}

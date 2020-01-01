@@ -167,6 +167,13 @@ h1 {
   font-size: larger
 }
 
+.bm-item-list span {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: larger;
+  cursor: pointer;
+}
+
 .bm-item:focus {
   outline: none;
 }

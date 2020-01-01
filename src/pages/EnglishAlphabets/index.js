@@ -27,9 +27,6 @@ function CarouselContainer(props) {
 const Container = touchWithMouseHOC(CarouselContainer)
 
 class EngAlphabets extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
 
   renderCard(index, modIndex, cursor) {
     const item = numbers[modIndex]

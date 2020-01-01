@@ -34,12 +34,7 @@ function CarouselContainer(props) {
 const Container = touchWithMouseHOC(CarouselContainer)
 
 class Colors extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
   renderCard(index, modIndex, cursor, isTitle) {
-    console.log('>>>', isTitle)
     const item = data[modIndex]
     const rotate = 40 * (index + cursor)
     const onTop = Math.abs(index + cursor) < 0.5

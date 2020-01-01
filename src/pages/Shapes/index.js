@@ -34,12 +34,7 @@ function CarouselContainer(props) {
 const Container = touchWithMouseHOC(CarouselContainer)
 
 class Shapes extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
   renderCard(index, modIndex, cursor, isTitle) {
-    console.log('>>>', isTitle)
     const item = data[modIndex]
     const rotate = 40 * (index + cursor)
     const onTop = Math.abs(index + cursor) < 0.5
@@ -110,7 +105,6 @@ class Shapes extends Component {
             cardPadCount={cardPadCount}
             autoplay={10e3}
             renderCard={(index, modIndex, cursor) => this.renderCard(index, modIndex, cursor, false)}
-          // renderCard={this.renderCard}
           />
         </React.StrictMode>
       </div>

@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -44,7 +44,7 @@
   font-variant-caps: small-caps;
 }
 
-.intro-text {
+/* .intro-text {
   position: absolute;
   text-align: center;
   padding: 30% 0%;
@@ -52,7 +52,7 @@
   font-size: 30px;
   font-family: monospace;
   font-feature-settings: "c2sc";
-}
+} */
 
 .alpha-title-bg {
   font-size:5vw;
