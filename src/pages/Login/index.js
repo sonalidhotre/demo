@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './login.css';
 import Cookies from 'universal-cookie';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const cookies = new Cookies();
 
@@ -48,7 +50,7 @@ class Login extends Component {
     let matched = {}
 
     this.state.allUsers.map(user => {
-      if (user.uname === this.state.uname && user.password === this.state.password) {
+      if ((user.uname === this.state.uname || user.email === this.state.uname) && user.password === this.state.password) {
         matched = user
         loginSuccessfull = true
       }
@@ -63,6 +65,7 @@ class Login extends Component {
       let path = `/`;
       this.props.history.push(path);
     } else {
+      toast.error("वापरकर्त्याचे नाव अथवा पासवर्ड चुकीचा आहे.")
       this.setState({
         uname: '',
         password: ''
@@ -73,11 +76,11 @@ class Login extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="Login-header">
           <div className="login-text">लॉगिन
             <div className="form-class">
               <div className="text-box-wrapper">
-                <input id="uname" type="text" value={this.state.uname} placeholder="वापरकर्ताचे नाव"
+                <input id="uname" type="text" value={this.state.uname} placeholder="वापरकर्तानाव किंवा ईमेल"
                   onChange={this.handleChange} required />
               </div>
               <div className="text-box-wrapper">
@@ -91,6 +94,7 @@ class Login extends Component {
               <div className="link-wrapper"><a href="/register">नवीन अकाउंट तयार करा</a></div>
             </div>
           </div>
+          <ToastContainer />
         </header>
       </div>
     );

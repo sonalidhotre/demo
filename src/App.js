@@ -32,10 +32,14 @@ class App extends Component {
     }
 
     // firebase.database().ref('users/1').set({
+    //   fname: "fname",
+    //   lname: "lname",
     //   uname: "uname",
     //   email: "uname@mail.com",
     //   password: "pass",
-    //   roles: ["teacher"]
+    //   confirmPass: "pass",
+    //   roles: ["teacher"],
+    //   dob: new Date().toString()
     // }).then(() => {
     //   console.log('INSERTED')
     // }).catch((error) => {

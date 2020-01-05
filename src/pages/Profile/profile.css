@@ -18,13 +18,14 @@ label {
   color: rgb(107, 105, 105);
   margin: 0 35px;
   background-color: white;
+  padding: 10px;
 }
 
 .Profile-header {
   /* background-color: #282c34; */
   background: #fff url('../../images/profile.jpg') center center fixed no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,19 +49,71 @@ label {
   font-variant-caps: small-caps;
 }
 
+.Profile-header .Profile-text .container {
+  border-radius: 20px;
+  padding: 50px;
+  margin: 15px;
+  width: 95%;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+
+.Profile-header .Profile-text .container .wrapper {
+  width: 80%;
+  display: table-row;
+  background-color: white;
+}
+
+.Profile-header .Profile-text .container .wrapper .label {
+  width: 50%;
+  color: gray;
+  display: table-cell;
+  border-bottom: 1px solid lightgray;
+  font-size: 20px;
+  text-align: left;
+  /* padding-left: 10%; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Profile-header .Profile-text .container .wrapper .value {
+  width: 50%;
+  display: table-cell;
+  border-bottom: 1px solid lightgray;
+  font-size: 30px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .Profile-header .Profile-text .form-class{
   position: relative;
 }
 .Profile-header .Profile-text .form-class .text-box-wrapper {}
+.Profile-header .Profile-text .form-class .text-box-wrapper .lebal{
+  border: none !important;
+    /* border-bottom: 2px solid black; */
+    padding: 15px;
+    font-size: large;
+    width: 40%;
+    margin: 5px;
+    text-align: right;
+    color: black;
+    background-color: lightgray;
+}
 .Profile-header .Profile-text .form-class .text-box-wrapper input[type=text],input[type=password] {
   border: none;
   border-bottom: 2px solid black;
   padding: 15px;
   font-size: large;
-  width: 50%;
+  width: 40%;
+  margin: 5px;
 }
 .Profile-header .Profile-text .form-class input {
   color: rgb(107, 105, 105);
+}
+.Profile-header .Profile-text .form-class label {
+  font-size: large;
 }
 .Profile-header .Profile-text .form-class .button {
   display: block;

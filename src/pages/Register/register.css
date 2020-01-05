@@ -17,13 +17,14 @@ label {
   font-size: 25px;
   color: grey;
   margin: 0 35px;
+  padding: 10px;
 }
 
 .Register-header {
   /* background-color: #282c34; */
-  background: #fff url('../../images/52.jpg') center center fixed no-repeat;
+  background: #fff url('../../images/register.jpg') center center fixed no-repeat;
   background-size: cover;
-  min-height: 110vh;
+  min-height: 280vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +37,7 @@ label {
 .Register-header .register-text {
   position: absolute;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
   vertical-align: middle;
   width: 80%;
@@ -50,13 +51,43 @@ label {
 .Register-header .register-text .form-class{
   position: relative;
 }
-.Register-header .register-text .form-class .text-box-wrapper {}
-.Register-header .register-text .form-class .text-box-wrapper input[type=text],input[type=password] {
+.Register-header .register-text .form-class .text-box-wrapper {
+  position: relative;
+}
+.Register-header .register-text .form-class .text-box-wrapper .dob {
+  font-size: large;
+  background-color: white;
+  border-bottom: 2px solid black;
+  padding: 13px;
+  width: 25%;
+}
+.Register-header .register-text .form-class .text-box-wrapper .dob-label {
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 15px;
+  background-color: white;
+  color: gray;
+  font-size: large;
+  margin: 5px;
+  width: 25%;
+}
+.Register-header .register-text .form-class .text-box-wrapper input[type=text], input[type=password] {
   border: none;
   border-bottom: 2px solid black;
   padding: 15px;
   font-size: large;
-  width: 50%;
+  width: 50% !important;
+  margin: 5px;
+}
+.Register-header .register-text .form-class .text-box-wrapper label {
+  color: black;
+  background-color: transparent;
+  font-size: 20px;
+}
+.Register-header .register-text .form-class .text-box-wrapper .eye-icon {
+  position: absolute;
+  top: 80px;
+  font-size: 40px;
 }
 .Register-header .register-text .form-class .button {
   display: block;

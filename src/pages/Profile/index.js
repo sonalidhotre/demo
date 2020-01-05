@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import './profile.css';
-import CheckboxGroup from 'react-checkbox-group';
 import Cookies from 'universal-cookie';
+import './profile.css';
 
 const cookies = new Cookies();
-
-var firebase = require('firebase/app');
-require('firebase/auth');
-require('firebase/database');
 
 class Profile extends Component {
   constructor(props) {
@@ -16,28 +11,31 @@ class Profile extends Component {
       uname: '',
       email: '',
       password: '',
+      confirmPass: '',
+      role: 'teacher',
+      allUsers: [],
+      count: 0,
       roles: [],
+      enableSubmit: false,
+      fname: "",
+      lname: "",
+      showPassword: false,
+      showConfirmPass: false,
+      dob: new Date()
     }
   }
 
   componentDidMount() {
     let thisuser = cookies.get('thisuser')
     this.setState({
+      fname: thisuser.fname,
+      lname: thisuser.lname,
       uname: thisuser.uname,
       email: thisuser.email,
       password: thisuser.password,
-      roles: thisuser.roles
-    })
-  }
-
-  setRoles = (selected) => {
-    let arr = selected
-    if (selected.includes("student")) {
-      arr = ["student"]
-    }
-    this.setState({
-      roles: arr,
-      enableSubmit: arr !== [] ? true : false
+      confirmPass: thisuser.confirmPass,
+      roles: thisuser.roles,
+      dob: new Date(thisuser.dob)
     })
   }
 
@@ -46,32 +44,32 @@ class Profile extends Component {
       <div className="App">
         <header className="Profile-header">
           <div className="Profile-text">प्रोफाइल ( Profile )
-            <div className="form-class">
-              <div className="text-box-wrapper">
-                <input id="uname" type="text" value={this.state.uname} placeholder="वापरकर्ताचे नाव" readOnly />
+          <div className="container">
+              <div className="wrapper">
+                <div className="label">वापरकर्ताचे प्रथम नाव</div><div className="value">{this.state.fname}</div>
               </div>
-              <div className="text-box-wrapper">
-                <input id="email" type="text" value={this.state.email} placeholder="ईमेल" readOnly />
+              <div className="wrapper">
+                <div className="label">वापरकर्ताचे आडनाव</div><div className="value">{this.state.lname}</div>
               </div>
-              <div className="text-box-wrapper">
-                <input id="password" type="password" value={this.state.password} placeholder="पासवर्ड" readOnly />
+              <div className="wrapper">
+                <div className="label">वापरकर्तानाव ( username )</div><div className="value">{this.state.uname}</div>
               </div>
-              <CheckboxGroup name="fruits" value={this.state.roles} onChange={this.setRoles}>
-                {(Checkbox) => (
-                  <>
-                    <label>
-                      <Checkbox value="teacher" /> शिक्षक</label>
-                    <label>
-                      <Checkbox value="student" /> विद्यार्थी</label>
-                    <label>
-                      <Checkbox value="parent" /> पालक</label>
-                  </>
-                )}
-              </CheckboxGroup>
+              <div className="wrapper">
+                <div className="label">ईमेल</div><div className="value">{this.state.email}</div>
+              </div>
+              <div className="wrapper">
+                <div className="label">वापरकर्त्याची जन्म तारीख</div><div className="value">
+                  {`${this.state.dob.getDate()}/${this.state.dob.getMonth()}/${this.state.dob.getUTCFullYear()}`}</div>
+              </div>
+              <div className="wrapper">
+                <div className="label">वापरकर्त्यांची भूमिका</div><div className="value">{this.state.roles.map(role => {
+                  return `${role} `
+                })}</div>
+              </div>
             </div>
           </div>
         </header>
-      </div>
+      </div >
     );
   }
 }
