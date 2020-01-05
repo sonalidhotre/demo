@@ -15,7 +15,7 @@
 
 .Login-header {
   /* background-color: #282c34; */
-  background: #fff url('../../images/52.jpg') center center fixed no-repeat;
+  background: #fff url('../../images/login.jpg') center center fixed no-repeat;
   background-size: cover;
   min-height: 130vh;
   display: flex;
@@ -29,7 +29,7 @@
 
 .Login-header .login-text {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
   vertical-align: middle;
   width: 80%;
