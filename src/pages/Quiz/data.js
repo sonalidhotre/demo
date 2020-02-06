@@ -29,7 +29,7 @@ export const quizList = [
       {
         id: "orange2",
         name: "गाजर",
-        source: require('./images/colors/orange2.gif')
+        source: require('./images/colors/orange2.jpg')
       },
       {
         id: "orange3",
@@ -48,12 +48,12 @@ export const quizList = [
       {
         id: "yellow2",
         name: "लिंबू",
-        source: require('./images/colors/yellow2.jpg')
+        source: require('./images/colors/yellow2.png')
       },
       {
         id: "yellow3",
         name: "आंबा",
-        source: require('./images/colors/yellow3.jpg')
+        source: require('./images/colors/yellow3.png')
       }]
   },
   {
@@ -81,7 +81,7 @@ export const quizList = [
       [{
         id: "lavender1",
         name: "लव्हेंडर फुल",
-        source: require('./images/colors/lavender1.gif')
+        source: require('./images/colors/lavender1.jpg')
       },
       {
         id: "lavender2",
@@ -119,7 +119,7 @@ export const quizList = [
       [{
         id: "pink1",
         name: "झगा",
-        source: require('./images/colors/pink1.jpg')
+        source: require('./images/colors/pink1.png')
       },
       {
         id: "pink2",

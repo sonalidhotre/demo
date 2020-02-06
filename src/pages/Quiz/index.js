@@ -15,7 +15,10 @@ class Quiz extends Component {
             <img src={require("../../images/stayTuned.jpg")} alt="stay tuned"></img>
           </div> */}
           <div className="quiz-layout">
-            <div className="quiz-main-area"></div>
+            <div className="quiz-main-area">
+              <img src={quizList[0].images[0].source} alt={quizList[0].images[0].id} height="85%"></img>
+              <div>{quizList[0].images[0].name}</div>
+            </div>
             <div className="quiz-options">
               <div className="option"></div>
               <div className="option"></div>
