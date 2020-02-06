@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { quizList } from './data';
 import './quiz.css';
 
 class Quiz extends Component {
   render() {
+    console.log('>>', quizList)
     return (
       <div className="App">
         <header className="quiz-header">
