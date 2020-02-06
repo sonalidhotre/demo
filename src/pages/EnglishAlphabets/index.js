@@ -42,7 +42,7 @@ class EngAlphabets extends Component {
             zIndex: onTop ? 1 : 0
           }}
         >
-          <div className='carousel-title'>{item.title}</div>
+          <div className='eng-alpha-carousel-title'>{item.title}</div>
           <img src={item.path} alt="Circle" height={150} width={150}></img>
           <img src={item.pathImg} alt="Circle" height={150} width={150}></img>
           <div className='carousel-description'>{item.text}</div>

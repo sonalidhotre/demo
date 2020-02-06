@@ -41,7 +41,7 @@ class Numbers extends Component {
             zIndex: onTop ? 1 : 0
           }}
         >
-          <div className='carousel-title'>{item.title}</div>
+          <div className='eng-num-carousel-title'>{item.title}</div>
           <img src={item.path} alt="Circle" height={150} width={120}></img>
           <div className="carousel-description">{item.text}</div>
         </div>
