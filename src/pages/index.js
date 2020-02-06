@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Alphabets from './alphabets';
 import Colors from './Colors';
+import ColorsQuiz from './ColorsQuiz';
 import Index from './ContentIndex';
 import EngAlphabets from './EnglishAlphabets';
 import EngNumbers from './EnglishNumbers';
@@ -39,6 +40,7 @@ class Pages extends Component {
             <Route path="/register" component={Register} />
             <Route path="/contentIndex" component={Index} />
             <Route path="/colors" component={Colors} />
+            <Route path="/colorsQuiz" component={ColorsQuiz} />
             <Route path="/shapes" component={Shapes} />
             <Route path="/alphabets" component={Alphabets} />
             <Route path="/numbers" component={Numbers} />
