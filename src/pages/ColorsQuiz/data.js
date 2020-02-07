@@ -14,7 +14,7 @@ export const quizList = [
       },
       {
         id: "red3",
-        name: "स्ट्रॉबेरी",
+        name: "गुलाब",
         source: require('./images/colors/red3.jpg')
       }]
   },

@@ -1,187 +1,135 @@
 export const quizList = [
   {
-    name: "red",
+    name: "circle",
     images:
       [{
-        id: "red1",
-        name: "टोमॅटो",
-        source: require('./images/colors/red1.jpg')
+        id: "circle1",
+        name: "बटण",
+        source: require('./images/quiz/round1.jpg')
       },
       {
-        id: "red2",
-        name: "स्ट्रॉबेरी",
-        source: require('./images/colors/red2.png')
+        id: "circle2",
+        name: "घड्याळ",
+        source: require('./images/quiz/round2.jpg')
       },
       {
-        id: "red3",
-        name: "स्ट्रॉबेरी",
-        source: require('./images/colors/red3.jpg')
+        id: "circle3",
+        name: "चेंडू",
+        source: require('./images/quiz/round3.jpg')
       }]
   },
   {
-    name: "orange",
+    name: "halfCircle",
     images:
       [{
-        id: "orange1",
-        name: "संत्री",
-        source: require('./images/colors/orange1.png')
+        id: "halfCircle1",
+        name: "चंद्र",
+        source: require('./images/quiz/halfCircle1.jpg')
       },
       {
-        id: "orange2",
-        name: "गाजर",
-        source: require('./images/colors/orange2.jpg')
+        id: "halfCircle2",
+        name: "फोड",
+        source: require('./images/quiz/halfCircle2.jpeg')
       },
       {
-        id: "orange3",
-        name: "भोपळा",
-        source: require('./images/colors/orange3.png')
+        id: "halfCircle3",
+        name: "कानटोपी",
+        source: require('./images/quiz/halfCircle3.png')
       }]
   },
   {
-    name: "yellow",
+    name: "triangle",
     images:
       [{
-        id: "yellow1",
-        name: "केळी",
-        source: require('./images/colors/yellow1.png')
+        id: "triangle1",
+        name: "शाळेची घंटा",
+        source: require('./images/quiz/triangle1.jpg')
       },
       {
-        id: "yellow2",
-        name: "लिंबू",
-        source: require('./images/colors/yellow2.png')
+        id: "triangle2",
+        name: "कपडे अडकवण्याची आकडी",
+        source: require('./images/quiz/triangle2.jpg')
       },
       {
-        id: "yellow3",
-        name: "आंबा",
-        source: require('./images/colors/yellow3.png')
+        id: "triangle3",
+        name: "सँडविच",
+        source: require('./images/quiz/triangle3.png')
       }]
   },
   {
-    name: "green",
+    name: "square",
     images:
       [{
-        id: "green1",
-        name: "गवत",
-        source: require('./images/colors/green1.jpg')
+        id: "square1",
+        name: "खिडकी",
+        source: require('./images/quiz/square1.jpg')
       },
       {
-        id: "green2",
-        name: "कलिंगड",
-        source: require('./images/colors/green2.png')
+        id: "square2",
+        name: "छायाचित्र चौकट",
+        source: require('./images/quiz/square2.jpg')
       },
       {
-        id: "green3",
-        name: "वाटाणे",
-        source: require('./images/colors/green3.png')
+        id: "square3",
+        name: "कॅरमबोर्ड",
+        source: require('./images/quiz/square3.jpg')
       }]
   },
   {
-    name: "lavender",
+    name: "reactangle",
     images:
       [{
-        id: "lavender1",
-        name: "लव्हेंडर फुल",
-        source: require('./images/colors/lavender1.jpg')
+        id: "rect1",
+        name: "फळा",
+        source: require('./images/quiz/react1.jpg')
       },
       {
-        id: "lavender2",
-        name: "द्राक्ष",
-        source: require('./images/colors/lavender2.jpg')
+        id: "rect2",
+        name: "पुस्तक",
+        source: require('./images/quiz/react2.png')
       },
       {
-        id: "lavender3",
-        name: "वांगं",
-        source: require('./images/colors/lavender3.jpg')
+        id: "rect3",
+        name: "कपाट",
+        source: require('./images/quiz/react3.jpg')
       }]
   },
   {
-    name: "black",
+    name: "oval",
     images:
       [{
-        id: "black1",
-        name: "छत्री",
-        source: require('./images/colors/black1.jpg')
+        id: "oval1",
+        name: "अंडा",
+        source: require('./images/quiz/oval1.jpeg')
       },
       {
-        id: "black2",
-        name: "केस",
-        source: require('./images/colors/black2.jpg')
+        id: "oval2",
+        name: "आरसा",
+        source: require('./images/quiz/oval2.jpg')
       },
       {
-        id: "black3",
-        name: "मांजर",
-        source: require('./images/colors/black3.jpg')
-      }]
-  },
-  {
-    name: "pink",
-    images:
-      [{
-        id: "pink1",
-        name: "झगा",
-        source: require('./images/colors/pink1.png')
-      },
-      {
-        id: "pink2",
-        name: "केस",
-        source: require('./images/colors/pink2.jpg')
-      },
-      {
-        id: "pink3",
+        id: "oval3",
         name: "फुगे",
-        source: require('./images/colors/pink3.png')
+        source: require('./images/quiz/oval3.png')
+      }]
+  },
+  {
+    name: "hexagone",
+    images:
+      [{
+        id: "hexagone1",
+        name: "मधुकोश",
+        source: require('./images/quiz/hexagone1.png')
+      },
+      {
+        id: "hexagone2",
+        name: "धातू नट",
+        source: require('./images/quiz/hexagone2.jpg')
+      },
+      {
+        id: "hexagone3",
+        name: "शिसपेन्सिल",
+        source: require('./images/quiz/hexagone3.jpg')
       }]
   }
 ]
-
-// const data = [
-//   {
-//     title: 'वर्तुळ',
-//     background: '#ff0000',
-//     text: `react-touch-carousel only handles the trouble parts, i.e.
-//     - touch gestures parsing
-//     - scroll cursor rounding and modding
-//     - items padding and looping
-//     - auto playing`
-//   },
-//   {
-//     title: 'अर्ध वर्तुळ',
-//     background: '#FFA500',
-//     text: `It is left up to you to
-//     - decide the carousel structure
-//     - render each item in the carousel
-//     - style everything
-//     - add some fancy decorators like dots`
-//   },
-//   {
-//     title: 'त्रिकोण',
-//     background: '#ffff00',
-//     text: `Install it by
-//     - npm install --save react-touch-carousel`
-//   },
-//   {
-//     title: 'चौरस',
-//     background: '#00ff00',
-//     text: `See some example code in the '/examples' dir at GitHub. And you can run and play with the code after cloning it, by
-//     - npm install
-//     - npm run dev
-//     - open localhost:5000`
-//   },
-//   {
-//     title: 'आयत',
-//     background: '#6a0dad',
-//     text: 'react-touch-carousel is released under MIT license'
-//   },
-//   {
-//     title: 'लंबवर्तुळ',
-//     background: '#FF3383',
-//     text: 'react-touch-carousel is released under MIT license'
-//   },
-//   {
-//     title: 'षटकोन',
-//     background: '#ffc0cb',
-//     text: 'react-touch-carousel is released under MIT license'
-//   }
-// ]
-
-// export default data
