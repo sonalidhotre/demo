@@ -13,6 +13,7 @@ import HMenu from './menu';
 import Numbers from './numbers';
 import Register from './Register';
 import Shapes from './Shapes';
+import ShapesQuiz from './ShapesQuiz';
 import Quiz from './Quiz';
 import Profile from './Profile';
 
@@ -42,6 +43,7 @@ class Pages extends Component {
             <Route path="/colors" component={Colors} />
             <Route path="/colorsQuiz" component={ColorsQuiz} />
             <Route path="/shapes" component={Shapes} />
+            <Route path="/shapesQuiz" component={ShapesQuiz} />
             <Route path="/alphabets" component={Alphabets} />
             <Route path="/numbers" component={Numbers} />
             <Route path="/engAlpha" component={EngAlphabets} />
