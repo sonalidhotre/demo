@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './home.css';
 import namaste from '../../images/namaste.png'
 
 class Home extends Component {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TouchCarousel, { clamp } from 'react-touch-carousel';
 import touchWithMouseHOC from 'react-touch-carousel/lib/touchWithMouseHOC';
-import './Shapes.css';
 import data from './data';
 import NonPassiveTouchTarget from './NonPassiveTouchTarget';
 import circle from './images/circle.svg';

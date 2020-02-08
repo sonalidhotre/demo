@@ -32,9 +32,6 @@ class Pages extends Component {
       <Fragment>
         <Router>
           <HMenu history={this.props.history}></HMenu>
-          {/* <button type="button" className="login-logout-button" onClick={this.handleLoginLogout}>
-            {this.state.showLogin ? <Link to="/login">Login</Link> : 'Logout' }
-          </button> */}
           <div className="content-wrap">
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />

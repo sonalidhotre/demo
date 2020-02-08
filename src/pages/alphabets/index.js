@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TouchCarousel, { clamp } from 'react-touch-carousel';
 import touchWithMouseHOC from 'react-touch-carousel/lib/touchWithMouseHOC';
-import './alpha.css';
 import swar from './swar';
 import vyanjan from './vyanjan';
 import NonPassiveTouchTarget from './NonPassiveTouchTarget';

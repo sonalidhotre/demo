@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ContentIndex.css';
 
 class Index extends Component {
   showPage = (path) => {

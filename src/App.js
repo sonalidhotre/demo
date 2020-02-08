@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Pages from './pages';
 
 var firebase = require('firebase/app');

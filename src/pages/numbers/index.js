@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TouchCarousel, { clamp } from 'react-touch-carousel';
 import touchWithMouseHOC from 'react-touch-carousel/lib/touchWithMouseHOC';
-import './numbers.css';
 import numbers from './numbers';
 import NonPassiveTouchTarget from './NonPassiveTouchTarget';
 

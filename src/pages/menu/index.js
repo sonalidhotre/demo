@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import BurgerMenu from 'react-burger-menu';
 import { Link, withRouter } from "react-router-dom";
 import Cookies from 'universal-cookie';
-import './menu.css';
 
 const cookies = new Cookies();
 

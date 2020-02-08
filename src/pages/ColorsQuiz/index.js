@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Colors.css';
 import Child from './child';
 
 class ColorsQuiz extends Component {

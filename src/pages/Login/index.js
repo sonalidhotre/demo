@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './login.css';
 import Cookies from 'universal-cookie';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

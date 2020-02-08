@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TouchCarousel, { clamp } from 'react-touch-carousel';
 import touchWithMouseHOC from 'react-touch-carousel/lib/touchWithMouseHOC';
-import './Colors.css';
 import data from './data';
 import NonPassiveTouchTarget from './NonPassiveTouchTarget';
 import orange from './videos/Orange.mp4';

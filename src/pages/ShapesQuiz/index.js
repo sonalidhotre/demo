@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Shapes.css';
 import Child from './child';
 
 class ShapesQuiz extends Component {

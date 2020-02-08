@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './register.css';
 import CheckboxGroup from 'react-checkbox-group';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
