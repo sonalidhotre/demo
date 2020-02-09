@@ -1170,7 +1170,7 @@ label {
 
 .quiz-layout .quiz-options .option {
   width: 22%;
-  background-color: hotpink;
+  /* background-color: hotpink; */
   margin: 3%;
   border: 10px solid white;
   box-shadow: 2px 2px 2px 2px grey;

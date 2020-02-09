@@ -22,7 +22,6 @@ class Child extends Component {
     if (this.props.options.indexOf(quizList[this.props.color].images[this.props.index].color) === -1) {
       optionList[this.props.offset] = quizList[this.props.color].images[this.props.index].color;
     }
-    console.log('>>', optionList, this.props.offset, quizList[this.props.color].images[this.props.index].color)
     if (this.state.hidden === "hidden") {
       return null
     }

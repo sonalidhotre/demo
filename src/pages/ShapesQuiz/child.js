@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { quizList } from './data';
+import { quizList, optionList } from './data';
 
 class Child extends Component {
   constructor(props) {
@@ -18,6 +18,18 @@ class Child extends Component {
     });
   }
   render() {
+    let flag = false;
+    let optList = this.props.options;
+    optList.map(opt => {
+      if (opt.name === quizList[this.props.color].images[this.props.index].shape) {
+        flag = true;
+      }
+      return null;
+    })
+    if (!flag) {
+      let obj = optionList.filter(opt => opt.name === quizList[this.props.color].images[this.props.index].shape)[0];
+      optList[this.props.offset] = obj;
+    }
     if (this.state.hidden === "hidden") {
       return null
     }
@@ -29,10 +41,11 @@ class Child extends Component {
             <div className="title">{quizList[this.props.color].images[this.props.index].name}</div>
           </div>
           <div className="quiz-options">
-            <div className="option"></div>
-            <div className="option"></div>
-            <div className="option"></div>
-            <div className="option"></div>
+            {optList.map(opt => (
+              <div className="option">
+                <img src={opt.src} alt={opt.name} height="100%"></img>
+              </div>
+            ))}
           </div>
         </div>
       </div>
