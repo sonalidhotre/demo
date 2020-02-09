@@ -20,7 +20,7 @@ class Child extends Component {
       that.swing();
       setTimeout(function () {
         that.hide();
-      }, 2000)
+      }, 2000);
     }, that.props.wait);
   }
   swing() {
