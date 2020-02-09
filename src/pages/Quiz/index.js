@@ -21,13 +21,13 @@ class Quiz extends Component {
           <div className="alpha-title" onClick={() => this.showPage('alphabets')}>
             <div className="title">मुळाक्षरे</div>
           </div>
-          <div className="number-title" onClick={() => this.showPage('numbers')}>
-            <div className="title">अंक</div>
+          <div className="number-title" onClick={() => this.showPage('numbersQuiz')}>
+            <div className="title">अंक प्रश्नोत्तरी</div>
           </div>
           <div className="alphabets-title" onClick={() => this.showPage('engAlpha')}>
             <div className="title">Alphabets (अल्फाबेट्स - इंग्रजी अक्षरे)</div>
           </div>
-          <div className="nums-title" onClick={() => this.showPage('engNumbers')}>
+          <div className="nums-title" onClick={() => this.showPage('engNumbersQuiz')}>
             <div className="title">Numbers (नंबर - अंक)</div>
           </div>
         </div>

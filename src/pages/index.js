@@ -6,11 +6,13 @@ import ColorsQuiz from './ColorsQuiz';
 import Index from './ContentIndex';
 import EngAlphabets from './EnglishAlphabets';
 import EngNumbers from './EnglishNumbers';
+import EngNumbersQuiz from './EnglishNumbersQuiz';
 import Footer from './Footer';
 import Home from './home';
 import Login from './Login';
 import HMenu from './menu';
 import Numbers from './numbers';
+import NumbersQuiz from './numbersQuiz';
 import Register from './Register';
 import Shapes from './Shapes';
 import ShapesQuiz from './ShapesQuiz';
@@ -43,8 +45,10 @@ class Pages extends Component {
             <Route path="/shapesQuiz" component={ShapesQuiz} />
             <Route path="/alphabets" component={Alphabets} />
             <Route path="/numbers" component={Numbers} />
+            <Route path="/numbersQuiz" component={NumbersQuiz} />
             <Route path="/engAlpha" component={EngAlphabets} />
             <Route path="/engNumbers" component={EngNumbers} />
+            <Route path="/engNumbersQuiz" component={EngNumbersQuiz} />
             <Route path="/quiz" component={Quiz} />
             <Route path="/profile" component={Profile} />
           </div>
