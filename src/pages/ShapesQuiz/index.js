@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import Child from './child';
+import { indexes } from './data';
 
 class ShapesQuiz extends Component {
   constructor() {
     super();
-    this.state = { count: 0, rerenderChild: true }
+    this.state = {
+      count: 0,
+      rerenderChild: true,
+      indexes: indexes,
+      x: null,
+      y: null
+    }
   }
 
   showPage = (path) => {
@@ -12,7 +19,11 @@ class ShapesQuiz extends Component {
   }
 
   increment = () => {
-    this.setState({ count: this.state.count + 1, rerenderChild: false }, () => {
+    const i = this.randomInt(0, 20 - this.state.count - 1);
+    var ids = this.state.indexes.filter((id, index) => (index !== i));
+    const obj = this.state.indexes[i];
+    ids.push(obj);
+    this.setState({ count: this.state.count + 1, indexes: ids, rerenderChild: false, x: obj.x, y: obj.y }, () => {
       if (this.state.count < 8) {
         this.setState({ rerenderChild: true })
       }

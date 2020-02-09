@@ -48,7 +48,7 @@ export const quizList = [
       {
         id: "triangle2",
         name: "कपडे अडकवण्याची आकडी",
-        source: require('./images/quiz/triangle2.jpg')
+        source: require('./images/quiz/triangle2.png')
       },
       {
         id: "triangle3",
@@ -62,7 +62,7 @@ export const quizList = [
       [{
         id: "square1",
         name: "खिडकी",
-        source: require('./images/quiz/square1.jpg')
+        source: require('./images/quiz/square1.png')
       },
       {
         id: "square2",
@@ -81,7 +81,7 @@ export const quizList = [
       [{
         id: "rect1",
         name: "फळा",
-        source: require('./images/quiz/react1.jpg')
+        source: require('./images/quiz/react1.png')
       },
       {
         id: "rect2",
@@ -124,7 +124,7 @@ export const quizList = [
       {
         id: "hexagone2",
         name: "धातू नट",
-        source: require('./images/quiz/hexagone2.jpg')
+        source: require('./images/quiz/hexagone2.png')
       },
       {
         id: "hexagone3",
@@ -132,4 +132,28 @@ export const quizList = [
         source: require('./images/quiz/hexagone3.jpg')
       }]
   }
+]
+
+export const indexes = [
+  { x: 0, y: 0 },
+  { x: 0, y: 1 },
+  { x: 0, y: 2 },
+  { x: 1, y: 0 },
+  { x: 1, y: 1 },
+  { x: 1, y: 2 },
+  { x: 2, y: 0 },
+  { x: 2, y: 1 },
+  { x: 2, y: 2 },
+  { x: 3, y: 0 },
+  { x: 3, y: 1 },
+  { x: 3, y: 2 },
+  { x: 4, y: 0 },
+  { x: 4, y: 1 },
+  { x: 4, y: 2 },
+  { x: 5, y: 0 },
+  { x: 5, y: 1 },
+  { x: 5, y: 2 },
+  { x: 6, y: 0 },
+  { x: 6, y: 1 },
+  { x: 6, y: 2 },
 ]
