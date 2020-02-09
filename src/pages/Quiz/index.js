@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './quiz.css';
 
 class Quiz extends Component {
   showPage = (path) => {
