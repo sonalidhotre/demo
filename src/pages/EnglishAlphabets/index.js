@@ -42,8 +42,8 @@ class EngAlphabets extends Component {
           }}
         >
           <div className='eng-alpha-carousel-title'>{item.title}</div>
-          <img src={item.path} alt="Circle" height={150} width={150}></img>
-          <img src={item.pathImg} alt="Circle" height={150} width={150}></img>
+          <img src={item.path} alt="Circle" height={140} width={140}></img>
+          <img src={item.pathImg} alt="Circle" height={140} width={140}></img>
           <div className='carousel-description'>{item.text}</div>
         </div>
       </div>
