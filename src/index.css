@@ -748,7 +748,7 @@ label {
 .Profile-header .Profile-text {
   position: absolute;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(255, 255, 255, 0.6); */
   text-align: center;
   vertical-align: middle;
   width: 80%;
@@ -762,24 +762,26 @@ label {
 .Profile-header .Profile-text .container {
   border-radius: 20px;
   padding: 50px;
-  margin: 15px;
-  width: 95%;
+  /* margin: 15px; */
+  width: 90%;
   background-color: white;
   box-shadow: 5px 5px 5px 5px gray;
 }
 
 .Profile-header .Profile-text .container .wrapper {
-  width: 80%;
-  display: table-row;
+  width: 100%;
+  /* display: table-row; */
+  display: flex;
   background-color: white;
+  border-bottom: 1px solid lightgray;
 }
 
 .Profile-header .Profile-text .container .wrapper .label {
   width: 50%;
   color: gray;
-  display: table-cell;
-  border-bottom: 1px solid lightgray;
-  font-size: 20px;
+  /* display: table-cell; */
+  /* border-bottom: 1px solid lightgray; */
+  font-size: 25px;
   text-align: left;
   /* padding-left: 10%; */
   padding-top: 10px;
@@ -788,8 +790,8 @@ label {
 
 .Profile-header .Profile-text .container .wrapper .value {
   width: 50%;
-  display: table-cell;
-  border-bottom: 1px solid lightgray;
+  /* display: table-cell; */
+  /* border-bottom: 1px solid lightgray; */
   font-size: 30px;
   text-align: left;
   padding-top: 10px;
