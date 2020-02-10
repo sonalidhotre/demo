@@ -272,11 +272,12 @@ h1 {
   overflow: hidden;
     position: relative;
   width: 100%;
-  height: 2000px;
+  /* height: 1500px; */
+  margin: 5% 0;
 }
 
-.color-title {
-  position: absolute;
+.index-odd-title {
+  /* position: absolute; */
 	background: url(./images/colors.jpg) no-repeat center center;
 	background-size: cover;
 	color: #fff;
@@ -285,11 +286,11 @@ h1 {
   padding: 20px;
   float: left;
   width: 70%;
-    margin: 20px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px 5px rgba(92, 91, 91, 0.5), 5px 5px 5px 5px rgba(92, 91, 91, 0.5);
 }
-.color-title .title {
+.index-odd-title .title {
 	font-size: 100px;
 	font-family: Anton, sans-serif;
 	text-align: center;
@@ -301,9 +302,9 @@ h1 {
   font-weight: bolder;
 }
 
-.shape-title {
-  position: absolute;
-	background: url(./images/shape-texture.png) no-repeat center center;
+.index-even-title {
+  /* position: absolute; */
+	background: url(./images/background1.jpg) no-repeat center center;
 	background-size: cover;
 	color: #fff;
 	-webkit-text-fill-color: transparent;
@@ -313,11 +314,11 @@ h1 {
   width: 70%;
   margin: 20px;
   border-radius: 50px;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px 5px rgba(92, 91, 91, 0.5), 5px 5px 5px 5px rgba(92, 91, 91, 0.5);
   top: 250px;
   left: 25%;
 }
-.shape-title .title {
+.index-even-title .title {
 	font-size: 100px;
 	font-family: Anton, sans-serif;
 	text-align: center;
@@ -327,128 +328,6 @@ h1 {
   padding: 0;
   text-transform: uppercase;
   font-weight: bolder;
-}
-
-.alpha-title {
-  position: absolute;
-	background: url(./images/alphabets.jpg) no-repeat center center;
-	background-size: cover;
-	color: #fff;
-	-webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  padding: 20px;
-  float: left;
-  top: 500px;
-  width: 70%;
-    margin: 20px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
-.alpha-title .title {
-	font-size: 100px;
-	font-family: Anton, sans-serif;
-	text-align: center;
-	-webkit-transition: text-shadow 1s ease;
-	text-shadow: 0 0 1px rgba(0,0,0,.4);
-	margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-.number-title {
-  position: absolute;
-	background: url(./images/numbers.jpg) no-repeat center center;
-	background-size: cover;
-	color: #fff;
-	-webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  padding: 20px;
-  float: right;
-  top: 750px;
-  left: 25%;
-  width: 70%;
-    margin: 20px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
-.number-title .title {
-	font-size: 100px;
-	font-family: Anton, sans-serif;
-	text-align: center;
-	-webkit-transition: text-shadow 1s ease;
-	text-shadow: 0 0 1px rgba(0,0,0,.2);
-	margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-.alphabets-title {
-  position: absolute;
-	background: url(./images/english-alphabet.jpg) no-repeat center center;
-	background-size: cover;
-	color: #fff;
-	-webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  padding: 20px;
-  float: left;
-  top: 1000px;
-  width: 70%;
-  top: 50%;
-    margin: 20px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
-.alphabets-title .title {
-	font-size: 100px;
-	font-family: Anton, sans-serif;
-	text-align: center;
-	-webkit-transition: text-shadow 1s ease;
-	text-shadow: 0 0 1px rgba(0,0,0,.5);
-	margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-.nums-title {
-  position: absolute;
-	background: url(./images/eng-numbers.jpg) no-repeat center center;
-	background-size: cover;
-	color: #fff;
-	-webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  padding: 20px;
-  float: right;
-  width: 70%;
-  top: 1550px;
-  left: 25%;
-    margin: 20px;
-    border-radius: 50px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0), 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-}
-.nums-title .title {
-	font-size: 100px;
-	font-family: Anton, sans-serif;
-	text-align: center;
-	-webkit-transition: text-shadow 1s ease;
-	text-shadow: 0 0 1px rgba(0,0,0,.5);
-	margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-
-.eng-alpha-header {
-  /* background-color: #282c34; */
-  background: #fff url('./images/engAlphas.jpg') center center fixed no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  position: relative;
-  /* color: white; */
 }
 
 .carousel-description {
