@@ -51,7 +51,7 @@ class Child extends Component {
       <div className="quiz-super-wrapper">
         <div className="quiz-layout">
           <div className="quiz-main-area">
-            <img src={quizList[this.props.color].source} alt={quizList[this.props.color].id} height="100%"></img>
+            <img className="num-img" src={quizList[this.props.color].source} alt={quizList[this.props.color].id}></img>
           </div>
           <div className="quiz-options">
             {optList.map(opt => {

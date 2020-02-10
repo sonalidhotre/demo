@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { quizList } from './data';
 import Child from './child';
-// import numbers from './numbers';
 
 class Numbers extends Component {
   constructor(){
@@ -53,7 +52,6 @@ class Numbers extends Component {
           && <Child
             wait={5000}
             color={this.randomInt(0, 9)}
-            // index={this.randomInt(0, 2)}
             increment={this.increment}
             options={this.getOptions()}
             offset={this.randomInt(0, 3)}

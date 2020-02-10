@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { quizList } from './data';
 import Child from './child';
-// import numbers from './numbers';
 
 class Numbers extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       count: 0,
@@ -18,9 +17,7 @@ class Numbers extends Component {
     var ids = this.state.indexes.filter((id, index) => (index !== i));
     const obj = this.state.indexes[i];
     ids.push(obj);
-    this.setState({ count: this.state.count + 1, indexes: ids, rerenderChild: false, 
-      // x: obj.x, y: obj.y 
-    }, () => {
+    this.setState({ count: this.state.count + 1, indexes: ids, rerenderChild: false }, () => {
       if (this.state.count < 8) {
         this.setState({ rerenderChild: true })
       }
@@ -53,7 +50,6 @@ class Numbers extends Component {
           && <Child
             wait={5000}
             color={this.randomInt(0, 9)}
-            // index={this.randomInt(0, 2)}
             increment={this.increment}
             options={this.getOptions()}
             offset={this.randomInt(0, 3)}
