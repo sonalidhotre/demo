@@ -18,8 +18,8 @@ class Quiz extends Component {
           <div className="shape-title" onClick={() => this.showPage('shapesQuiz')}>
             <div className="title">आकार प्रश्नोत्तरी</div>
           </div>
-          <div className="alpha-title" onClick={() => this.showPage('alphabets')}>
-            <div className="title">मुळाक्षरे</div>
+          <div className="alpha-title" onClick={() => this.showPage('alphabetsQuiz')}>
+            <div className="title">मुळाक्षरे प्रश्नोत्तरी</div>
           </div>
           <div className="number-title" onClick={() => this.showPage('numbersQuiz')}>
             <div className="title">अंक प्रश्नोत्तरी</div>

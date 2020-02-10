@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Alphabets from './alphabets';
+import AlphabetsQuiz from './alphabetsQuiz';
+import Swar from './alphabetsQuiz/swar';
+import Vyanjan from './alphabetsQuiz/vyanjan';
 import Colors from './Colors';
 import ColorsQuiz from './ColorsQuiz';
 import Index from './ContentIndex';
@@ -45,6 +48,9 @@ class Pages extends Component {
             <Route path="/shapes" component={Shapes} />
             <Route path="/shapesQuiz" component={ShapesQuiz} />
             <Route path="/alphabets" component={Alphabets} />
+            <Route path="/alphabetsQuiz" component={AlphabetsQuiz} />
+            <Route path="/swar" component={Swar} />
+            <Route path="/vyanjan" component={Vyanjan} />
             <Route path="/numbers" component={Numbers} />
             <Route path="/numbersQuiz" component={NumbersQuiz} />
             <Route path="/engAlpha" component={EngAlphabets} />
