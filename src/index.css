@@ -1175,3 +1175,11 @@ label {
   border: 10px solid white;
   box-shadow: 2px 2px 2px 2px grey;
 }
+
+.quiz-layout .quiz-options .num-title {
+  font-size: 70px;
+  font-weight: 700;
+  background-color: #4d9900;
+  border: 10px solid #cca300;
+  color: #ffffff;
+}
