@@ -5,6 +5,7 @@ import Colors from './Colors';
 import ColorsQuiz from './ColorsQuiz';
 import Index from './ContentIndex';
 import EngAlphabets from './EnglishAlphabets';
+import EngAlphabetsQuiz from './EnglishAlphabetsQuiz';
 import EngNumbers from './EnglishNumbers';
 import EngNumbersQuiz from './EnglishNumbersQuiz';
 import Footer from './Footer';
@@ -47,6 +48,7 @@ class Pages extends Component {
             <Route path="/numbers" component={Numbers} />
             <Route path="/numbersQuiz" component={NumbersQuiz} />
             <Route path="/engAlpha" component={EngAlphabets} />
+            <Route path="/engAlphaQuiz" component={EngAlphabetsQuiz} />
             <Route path="/engNumbers" component={EngNumbers} />
             <Route path="/engNumbersQuiz" component={EngNumbersQuiz} />
             <Route path="/quiz" component={Quiz} />
