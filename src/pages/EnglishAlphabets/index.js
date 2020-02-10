@@ -65,7 +65,7 @@ class EngAlphabets extends Component {
           }}
         >
           <div className="video-container">
-          <video id="v" width="290" height="220" controls autoPlay loop muted>
+          <video id="v" width="100%" controls autoPlay loop muted>
             <source src={item.vidSrc} type="video/mp4"></source>
             <source src={item.vidSrc} type="video/ogg"></source>Your browser does not support the video tag.</video>
           </div>

@@ -54,43 +54,43 @@ class Colors extends Component {
             <div className='video-container'>
               {item.title === "लाल"
                 ?
-                <video id="v" width="220" height="140" controls autoPlay loop muted>
+                <video id="v" width="100%" height="140" controls autoPlay loop muted>
                   <source src={red} type="video/mp4"></source>
                   <source src={red} type="video/ogg"></source>Your browser does not support the video tag.
               </video>
                 : item.title === "केशरी"
                   ?
-                  <video id="v" width="220" height="140" controls autoPlay loop muted>
+                  <video id="v" width="100%" height="140" controls autoPlay loop muted>
                     <source src={orange} type="video/mp4"></source>
                     <source src={orange} type="video/ogg"></source>Your browser does not support the video tag.
                 </video>
                   : item.title === "पिवळा"
                     ?
-                    <video id="v" width="220" height="140" controls autoPlay loop muted>
+                    <video id="v" width="100%" height="140" controls autoPlay loop muted>
                       <source src={yellow} type="video/mp4"></source>
                       <source src={yellow} type="video/ogg"></source>Your browser does not support the video tag.
                   </video>
                     : item.title === "हिरवा"
                       ?
-                      <video id="v" width="220" height="140" controls autoPlay loop muted>
+                      <video id="v" width="100%" height="140" controls autoPlay loop muted>
                         <source src={green} type="video/mp4"></source>
                         <source src={green} type="video/ogg"></source>Your browser does not support the video tag.
                     </video>
                       : item.title === "जांभळा"
                         ?
-                        <video id="v" width="220" height="140" controls autoPlay loop muted>
+                        <video id="v" width="100%" height="140" controls autoPlay loop muted>
                           <source src={purple} type="video/mp4"></source>
                           <source src={purple} type="video/ogg"></source>Your browser does not support the video tag.
                       </video>
                         : item.title === "काळा"
                           ?
-                          <video id="v" width="220" height="140" controls autoPlay loop muted>
+                          <video id="v" width="100%" height="140" controls autoPlay loop muted>
                             <source src={black} type="video/mp4"></source>
                             <source src={black} type="video/ogg"></source>Your browser does not support the video tag.
                         </video>
                           : item.title === "गुलाबी"
                             ?
-                            <video id="v" width="220" height="140" controls autoPlay loop muted>
+                            <video id="v" width="100%" height="140" controls autoPlay loop muted>
                               <source src={pink} type="video/mp4"></source>
                               <source src={pink} type="video/ogg"></source>Your browser does not support the video tag.
                           </video>
