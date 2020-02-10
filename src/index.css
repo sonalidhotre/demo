@@ -88,6 +88,20 @@ code {
   /* color: white; */
 }
 
+.eng-alpha-header {
+  /* background-color: #282c34; */
+  background: #fff url('./images/engAlphas.jpg') center center fixed no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  position: relative;
+  /* color: white; */
+}
+
 .colors-header {
   /* background-color: #282c34; */
   background: #fff url('./images/colors.jpg') center center fixed no-repeat;
