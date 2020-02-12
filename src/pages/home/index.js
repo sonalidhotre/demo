@@ -10,8 +10,13 @@ class Home extends Component {
             {/* <img src={namaste} alt="namaste" width={200} height={200}></img><br /> */}
             स्वागत आहे</div>
         </header>
-        <div className="intro-text">आम्ही हि वेबसाईट मूक-बधिर मुले, त्यांचे शिक्षक आणि त्यांचा पालकांसाठी बनवत आहोत.
+        <div className="section">
+          <div className="intro-text">आम्ही हि वेबसाईट मूक-बधिर मुले, त्यांचे शिक्षक आणि त्यांचा पालकांसाठी बनवत आहोत.
         हि वेबसाईट बनवण्यामागे कारण हे आहे कि आम्हाला त्यांचा शैक्षणिक अनुभव सुखद आणि सोईस्कर बनवायचा आहे.</div>
+          <div className="motive-icon">
+            <img src={require('../../images/motive-icon.jpg')} alt="motive-icon" height="300px" width="100%"/>
+          </div>
+        </div>
         <div className="section">
           <div className="background blue-purple"></div>
           <div className="background green-blue"></div>
