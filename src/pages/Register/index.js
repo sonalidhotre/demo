@@ -3,10 +3,89 @@ import CheckboxGroup from 'react-checkbox-group';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DatePicker from 'react-date-picker';
+// import chroma from 'chroma-js';
+import Select from 'react-select';
 
 var firebase = require('firebase/app');
 require('firebase/auth');
 require('firebase/database');
+
+// export const colourOptions = [
+//   { value: 'ocean', label: 'Ocean', color: '#00B8D9', isFixed: true },
+//   { value: 'blue', label: 'Blue', color: '#0052CC', isDisabled: true },
+//   { value: 'purple', label: 'Purple', color: '#5243AA' },
+//   { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
+//   { value: 'orange', label: 'Orange', color: '#FF8B00' },
+//   { value: 'yellow', label: 'Yellow', color: '#FFC400' },
+//   { value: 'green', label: 'Green', color: '#36B37E' },
+//   { value: 'forest', label: 'Forest', color: '#00875A' },
+//   { value: 'slate', label: 'Slate', color: '#253858' },
+//   { value: 'silver', label: 'Silver', color: '#666666' },
+// ];
+
+const colourStyles = {
+  control: styles => ({
+    ...styles,
+    // backgroundColor: 'white', 
+    border: 'none',
+    borderBottom: '2px solid black',
+    padding: '5px',
+    fontSize: 'large',
+    borderRadius: 0,
+    fontFamily: 'inherit !important',
+    fontVariantCaps: 'normal',
+  }),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    // const color = chroma(data.color);
+    return {
+      ...styles,
+      // backgroundColor: isDisabled
+      //   ? null
+      //   : isSelected
+      //     ? data.color
+      //     : isFocused
+      //       ? color.alpha(0.1).css()
+      //       : null,
+      // color: isDisabled
+      //   ? '#ccc'
+      //   : isSelected
+      //     ? chroma.contrast(color, 'white') > 2
+      //       ? 'white'
+      //       : 'black'
+      //     : data.color,
+      cursor: isDisabled ? 'not-allowed' : 'default',
+      fontFamily: 'inherit',
+      padding: '10px 20px',
+      fontSize: 'large',
+      textAlign: 'left',
+      fontVariantCaps: 'normal',
+
+      ':active': {
+        ...styles[':active'],
+        // backgroundColor: !isDisabled && (isSelected ? data.color : color.alpha(0.3).css()),
+      },
+    };
+  },
+  multiValue: (styles, { data }) => {
+    // const color = chroma(data.color);
+    return {
+      ...styles,
+      // backgroundColor: color.alpha(0.1).css(),
+    };
+  },
+  multiValueLabel: (styles, { data }) => ({
+    ...styles,
+    // color: data.color,
+  }),
+  multiValueRemove: (styles, { data }) => ({
+    ...styles,
+    // color: data.color,
+    ':hover': {
+      // backgroundColor: data.color,
+      color: 'white',
+    },
+  }),
+};
 
 class Register extends Component {
   constructor(props) {
@@ -18,6 +97,8 @@ class Register extends Component {
       confirmPass: '',
       role: 'teacher',
       allUsers: [],
+      students: [],
+      selectedStudent: [],
       count: 0,
       roles: [],
       enableSubmit: false,
@@ -25,25 +106,31 @@ class Register extends Component {
       lname: "",
       showPassword: false,
       showConfirmPass: false,
-      dob: new Date()
+      dob: new Date(),
+      rerenderStudentIds: false
     }
   }
 
   componentDidMount() {
-    let arr = []
+    let arr = [];
+    let students = [];
     const db = firebase.database().ref().child('users');
     const usersRef = db.child('count');
     let cnt = 0;
     usersRef.on('value', snap => {
       for (var i = 1; i <= snap.val(); i++) {
         db.child(`${i}`).on('value', snap => {
-          arr.push(snap.val())
+          arr.push(snap.val());
+          if (snap.val().roles.includes('student')) {
+            students.push({ id: `${i}`, label: `${snap.val().fname} ${snap.val().lname}`, value: `${snap.val().fname} ${snap.val().lname}` })
+          }
         })
       }
       cnt = snap.val();
     })
     this.setState({
       allUsers: arr,
+      students: students,
       count: cnt
     })
   }
@@ -149,7 +236,14 @@ class Register extends Component {
     }
     this.setState({
       roles: arr,
-      enableSubmit: arr !== [] ? true : false
+      enableSubmit: arr !== [] ? true : false,
+      rerenderStudentIds: false
+    }, () => {
+      if (this.state.roles.includes("parent")) {
+        this.setState({ rerenderStudentIds: true })
+      } else if (this.state.rerenderStudentIds) {
+        this.setState({ rerenderStudentIds: false, selectedStudent: [] })
+      }
     })
   }
 
@@ -159,6 +253,12 @@ class Register extends Component {
   }
 
   handleDOB = (date) => { this.setState({ dob: date }) }
+
+  handleChange = selectedStudent => {
+    this.setState({ selectedStudent, rerenderStudentIds: false }, () => {
+      this.setState({ rerenderStudentIds: true })
+    });
+  }
 
   render() {
     return (
@@ -214,6 +314,20 @@ class Register extends Component {
                   </>
                 )}
               </CheckboxGroup>
+              {this.state.rerenderStudentIds ?
+                <div className="text-box-wrapper">
+                  <div className="dropdown-wrapper">
+                    <Select
+                      closeMenuOnSelect={false}
+                      defaultValue={this.state.selectedStudent && this.state.selectedStudent.length > 0 ? this.state.selectedStudent : null}
+                      onChange={this.handleChange}
+                      isMulti
+                      options={this.state.students}
+                      styles={colourStyles}
+                    />
+                  </div>
+                </div>
+                : null}
               <button className="button"
                 style={{ verticalAlign: "middle" }}
                 onClick={this.handleSubmit}

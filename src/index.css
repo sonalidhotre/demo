@@ -1114,7 +1114,7 @@ label {
   width: 80%;
   height: 100%;
   font-size: 8vw;
-  font-family: monospace;
+  font-family: inherit;
   font-feature-settings: "c2sc";
   font-variant-caps: small-caps;
 }
@@ -1124,6 +1124,10 @@ label {
 }
 .Register-header .register-text .form-class .text-box-wrapper {
   position: relative;
+}
+.Register-header .register-text .form-class .text-box-wrapper .dropdown-wrapper {
+  width: 50%;
+  margin: 50px auto;
 }
 .Register-header .register-text .form-class .text-box-wrapper .dob {
   font-size: large;
