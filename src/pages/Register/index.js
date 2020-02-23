@@ -3,89 +3,10 @@ import CheckboxGroup from 'react-checkbox-group';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DatePicker from 'react-date-picker';
-// import chroma from 'chroma-js';
-// import Select from 'react-select';
 
 var firebase = require('firebase/app');
 require('firebase/auth');
 require('firebase/database');
-
-// export const colourOptions = [
-//   { value: 'ocean', label: 'Ocean', color: '#00B8D9', isFixed: true },
-//   { value: 'blue', label: 'Blue', color: '#0052CC', isDisabled: true },
-//   { value: 'purple', label: 'Purple', color: '#5243AA' },
-//   { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
-//   { value: 'orange', label: 'Orange', color: '#FF8B00' },
-//   { value: 'yellow', label: 'Yellow', color: '#FFC400' },
-//   { value: 'green', label: 'Green', color: '#36B37E' },
-//   { value: 'forest', label: 'Forest', color: '#00875A' },
-//   { value: 'slate', label: 'Slate', color: '#253858' },
-//   { value: 'silver', label: 'Silver', color: '#666666' },
-// ];
-
-// const colourStyles = {
-//   control: styles => ({
-//     ...styles,
-//     // backgroundColor: 'white', 
-//     border: 'none',
-//     borderBottom: '2px solid black',
-//     padding: '5px',
-//     fontSize: 'large',
-//     borderRadius: 0,
-//     fontFamily: 'inherit !important',
-//     fontVariantCaps: 'normal',
-//   }),
-//   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
-//     // const color = chroma(data.color);
-//     return {
-//       ...styles,
-//       // backgroundColor: isDisabled
-//       //   ? null
-//       //   : isSelected
-//       //     ? data.color
-//       //     : isFocused
-//       //       ? color.alpha(0.1).css()
-//       //       : null,
-//       // color: isDisabled
-//       //   ? '#ccc'
-//       //   : isSelected
-//       //     ? chroma.contrast(color, 'white') > 2
-//       //       ? 'white'
-//       //       : 'black'
-//       //     : data.color,
-//       cursor: isDisabled ? 'not-allowed' : 'default',
-//       fontFamily: 'inherit',
-//       padding: '10px 20px',
-//       fontSize: 'large',
-//       textAlign: 'left',
-//       fontVariantCaps: 'normal',
-
-//       ':active': {
-//         ...styles[':active'],
-//         // backgroundColor: !isDisabled && (isSelected ? data.color : color.alpha(0.3).css()),
-//       },
-//     };
-//   },
-//   multiValue: (styles, { data }) => {
-//     // const color = chroma(data.color);
-//     return {
-//       ...styles,
-//       // backgroundColor: color.alpha(0.1).css(),
-//     };
-//   },
-//   multiValueLabel: (styles, { data }) => ({
-//     ...styles,
-//     // color: data.color,
-//   }),
-//   multiValueRemove: (styles, { data }) => ({
-//     ...styles,
-//     // color: data.color,
-//     ':hover': {
-//       // backgroundColor: data.color,
-//       color: 'white',
-//     },
-//   }),
-// };
 
 class Register extends Component {
   constructor(props) {
@@ -97,10 +18,7 @@ class Register extends Component {
       fatheremail: '',
       password: '',
       confirmPass: '',
-      role: 'teacher',
       allUsers: [],
-      students: [],
-      selectedStudent: [],
       count: 0,
       roles: [],
       enableSubmit: false,
@@ -309,6 +227,22 @@ class Register extends Component {
     this.setState({
       roles: arr,
       enableSubmit: arr !== [] ? true : false,
+      fname: '',
+      lname: '',
+      class: '',
+      devision: '',
+      motherfname: '',
+      motherlname: '',
+      fatherfname: '',
+      fatherlname: '',
+      motheremail: '',
+      fatheremail: '',
+      uname: '',
+      password: '',
+      confirmPass: '',
+      pno: '',
+      city: '',
+      dob: new Date()
     })
   }
 
@@ -356,14 +290,16 @@ class Register extends Component {
                 </div>
               </div>
               <div className="text-box-wrapper">
-                <button className="button"
-                  style={{ verticalAlign: "middle" }}
-                  onClick={() => {
-                    if (this.isCheckboxSelected()) {
-                      this.setState({ form: this.state.form + 1 })
-                    }
-                  }}
-                ><span>पुढे </span></button>
+                <div className="btn-wrapper">
+                  <button className="button"
+                    style={{ verticalAlign: "middle" }}
+                    onClick={() => {
+                      if (this.isCheckboxSelected()) {
+                        this.setState({ form: this.state.form + 1 })
+                      }
+                    }}
+                  ><span>पुढे </span></button>
+                </div>
               </div>
             </div>
             : null}
@@ -396,14 +332,20 @@ class Register extends Component {
                   onChange={this.handleChange} required />
               </div>
               <div className="text-box-wrapper">
-                <button className="button"
-                  style={{ verticalAlign: "middle" }}
-                  onClick={() => {
-                    if (this.isCheckboxSelected()) {
-                      this.setState({ form: this.state.form + 1 })
-                    }
-                  }}
-                ><span>पुढे </span></button>
+                <div className="btn-wrapper">
+                  <button className="button"
+                    style={{ verticalAlign: "middle" }}
+                    onClick={() => { this.setState({ form: this.state.form - 1 }) }}
+                  ><span>मागे </span></button>
+                  <button className="button"
+                    style={{ verticalAlign: "middle" }}
+                    onClick={() => {
+                      if (this.isCheckboxSelected()) {
+                        this.setState({ form: this.state.form + 1 })
+                      }
+                    }}
+                  ><span>पुढे </span></button>
+                </div>
               </div>
             </div>
             : null}
@@ -413,34 +355,37 @@ class Register extends Component {
               <div className="text-box-wrapper">
                 <label><i className="fa fa-exclamation-circle" style={{ fontSize: "30px" }}></i> सर्व फील्ड अनिवार्य आहेत. हा फॉर्म इंग्रजी मधेच भरता येईल.</label>
               </div>
-              <div className="text-box-wrapper">
-                <input id="motherfname" type="text" value={this.state.motherfname} placeholder="आईचे प्रथम नाव"
-                  onChange={this.handleChange} required />
-              </div>
-              <div className="text-box-wrapper">
-                <input id="motherlname" type="text" value={this.state.motherlname} placeholder="आईचे आडनाव"
-                  onChange={this.handleChange} required />
-              </div>
-              <div className="text-box-wrapper">
-                <input id="motheremail" type="text" value={this.state.motheremail} placeholder="आईचा ईमेल"
-                  onChange={this.handleChange} required />
-              </div>
-              <div className="text-box-wrapper">
-                <input id="fatherfname" type="text" value={this.state.fatherfname} placeholder="वडिलांचे प्रथम नाव"
-                  onChange={this.handleChange} required />
-              </div>
-              <div className="text-box-wrapper">
-                <input id="fatherlname" type="text" value={this.state.fatherlname} placeholder="वडिलांचे आडनाव"
-                  onChange={this.handleChange} required />
-              </div>
-              <div className="text-box-wrapper">
-                <input id="fatheremail" type="text" value={this.state.fatheremail} placeholder="वडिलांचा ईमेल"
-                  onChange={this.handleChange} required />
-              </div>
-              <div className="text-box-wrapper">
-                <input id="email" type="text" value={this.state.email} placeholder="ईमेल"
-                  onChange={this.handleChange} required />
-              </div>
+              {this.state.roles.includes("student")
+                ? <div>
+                  <div className="text-box-wrapper">
+                    <input id="motherfname" type="text" value={this.state.motherfname} placeholder="आईचे प्रथम नाव"
+                      onChange={this.handleChange} required />
+                  </div>
+                  <div className="text-box-wrapper">
+                    <input id="motherlname" type="text" value={this.state.motherlname} placeholder="आईचे आडनाव"
+                      onChange={this.handleChange} required />
+                  </div>
+                  <div className="text-box-wrapper">
+                    <input id="motheremail" type="text" value={this.state.motheremail} placeholder="आईचा ईमेल"
+                      onChange={this.handleChange} required />
+                  </div>
+                  <div className="text-box-wrapper">
+                    <input id="fatherfname" type="text" value={this.state.fatherfname} placeholder="वडिलांचे प्रथम नाव"
+                      onChange={this.handleChange} required />
+                  </div>
+                  <div className="text-box-wrapper">
+                    <input id="fatherlname" type="text" value={this.state.fatherlname} placeholder="वडिलांचे आडनाव"
+                      onChange={this.handleChange} required />
+                  </div>
+                  <div className="text-box-wrapper">
+                    <input id="fatheremail" type="text" value={this.state.fatheremail} placeholder="वडिलांचा ईमेल"
+                      onChange={this.handleChange} required />
+                  </div>
+                </div>
+                : <div className="text-box-wrapper">
+                  <input id="email" type="text" value={this.state.email} placeholder="ईमेल"
+                    onChange={this.handleChange} required />
+                </div>}
               <div className="text-box-wrapper">
                 <input id="uname" type="text" value={this.state.uname} placeholder="वापरकर्तानाव ( username )"
                   onChange={this.handleChange} required />
@@ -470,22 +415,19 @@ class Register extends Component {
                   onChange={this.handleChange} required />
               </div>
               <div className="text-box-wrapper">
-                <button className="button"
-                  style={{ verticalAlign: "middle" }}
-                  onClick={this.handleSubmit}
-                ><span>नोंदणी करा </span></button>
+                <div className="btn-wrapper">
+                  <button className="button"
+                    style={{ verticalAlign: "middle" }}
+                    onClick={() => { this.setState({ form: this.state.form - 1 }) }}
+                  ><span>मागे </span></button>
+                  <button className="button"
+                    style={{ verticalAlign: "middle" }}
+                    onClick={this.handleSubmit}
+                  ><span>नोंदणी करा </span></button>
+                </div>
               </div>
             </div>
             : null}
-          {/* {this.state.form < 3
-            ? <button className="button"
-              style={{ verticalAlign: "middle" }}
-              onClick={() => { this.setState({ form: this.state.form + 1 }) }}
-            ><span>पुढे </span></button>
-            : <button className="button"
-              style={{ verticalAlign: "middle" }}
-              onClick={this.handleSubmit}
-            ><span>नोंदणी करा </span></button>} */}
         </div>
         <ToastContainer />
       </div >

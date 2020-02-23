@@ -1230,30 +1230,35 @@ label {
   right: 20%;
   font-size: 30px;
 }
-.register-wrapper .form-class .button {
-  display: block;
-    border-radius: 4px;
-    background-color: black;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: x-large;
-    padding: 15px;
-    width: 20%;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 35px 40%;
+.register-wrapper .form-class .btn-wrapper {
+  width: 50%;
+  margin: 0px auto;
+  display: flex;
 }
-.register-wrapper .form-class .button-disabled {
+.register-wrapper .form-class .btn-wrapper .button {
+  display: block;
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: x-large;
+  padding: 15px;
+  width: 20%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 35px auto;
+}
+.register-wrapper .form-class .btn-wrapper .button-disabled {
   background-color: grey !important;
 }
-.register-wrapper .form-class .button span {
+.register-wrapper .form-class .btn-wrapper .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-.register-wrapper .form-class .button span:after {
+.register-wrapper .form-class .btn-wrapper .button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -1261,10 +1266,10 @@ label {
   right: -20px;
   transition: 0.5s;
 }
-.register-wrapper .form-class .button:hover span {
+.register-wrapper .form-class .btn-wrapper .button:hover span {
   padding-right: 25px;
 }
-.register-wrapper .form-class .button:hover span:after {
+.register-wrapper .form-class .btn-wrapper .button:hover span:after {
   opacity: 1;
   right: 0;
 }
