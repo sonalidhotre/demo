@@ -1124,6 +1124,7 @@ label {
 
 .register-wrapper .form-class{
   position: relative;
+  border-bottom: 1px solid #80808082;
 }
 .register-wrapper .form-class .text-box-wrapper {
   position: relative;

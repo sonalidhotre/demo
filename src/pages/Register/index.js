@@ -12,31 +12,30 @@ class Register extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      allUsers: [],
+      count: 0,
+      enableSubmit: false,
+      showPassword: false,
+      showConfirmPass: false,
+      form: 1,
       uname: '',
       email: '',
       motheremail: '',
       fatheremail: '',
       password: '',
       confirmPass: '',
-      allUsers: [],
-      count: 0,
       roles: [],
-      enableSubmit: false,
       fname: "",
       motherfname: "",
       fatherfname: "",
       lname: "",
       motherlname: "",
       fatherlname: "",
-      showPassword: false,
-      showConfirmPass: false,
       dob: new Date(),
-      // rerenderStudentIds: false,
       class: "",
       devision: "",
       pno: "",
-      city: "",
-      form: 1
+      city: ""
     }
   }
 
@@ -166,12 +165,15 @@ class Register extends Component {
       } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.motheremail))) {
         document.getElementById('motheremail').focus()
         toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
+        return false
       } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.fatheremail))) {
         document.getElementById('fatheremail').focus()
         toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
+        return false
       } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.email))) {
         document.getElementById('email').focus()
         toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
+        return false
       }
     }
     return true
