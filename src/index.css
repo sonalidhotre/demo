@@ -950,7 +950,7 @@ main {
 }
 
 label {
-  font-size: 25px;
+  /* font-size: 25px; */
   color: rgb(107, 105, 105);
   margin: 0 35px;
   background-color: white;
@@ -1095,7 +1095,7 @@ label {
   /* background-color: #282c34; */
   background: #fff url('./images/register.jpg') center center fixed no-repeat;
   background-size: cover;
-  min-height: 280vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1105,66 +1105,132 @@ label {
   /* color: white; */
 }
 
-.Register-header .register-text {
+.Register-header .register-text{
   position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0);
   text-align: center;
   vertical-align: middle;
-  width: 80%;
-  height: 100%;
-  font-size: 8vw;
-  font-family: inherit;
-  font-feature-settings: "c2sc";
+  padding: 20% 0;
+  width: 100%;
+  font-size:10vw;
+  font-family: monospace;
   font-variant-caps: small-caps;
 }
 
-.Register-header .register-text .form-class{
+.register-wrapper{
+  min-height: fit-content;
+  /* box-shadow: 1px 1px 5px 1px black; */
+}
+
+.register-wrapper .form-class{
   position: relative;
 }
-.Register-header .register-text .form-class .text-box-wrapper {
+.register-wrapper .form-class .text-box-wrapper {
   position: relative;
+  margin: 20px 0;
+  display: flex;
 }
-.Register-header .register-text .form-class .text-box-wrapper .dropdown-wrapper {
+.register-wrapper .three {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  align-items: stretch;
+  padding: 0;
+  height: 50px;
+}
+.register-wrapper .three .inactive {
+  opacity: 0.5;
+}
+.register-wrapper .three .btn {
+  width: 33.333%;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  vertical-align: baseline;
+  border-radius: 0;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+  font-weight: 800;
+  font-size: large;
+  background-color: #cccccc;
+}
+.register-wrapper .three .done {
+  font-weight: 500;
+}
+.register-wrapper .form-class .text-box-wrapper .dropdown-wrapper {
   width: 50%;
   margin: 50px auto;
+  background-color: #ffffff;
 }
-.Register-header .register-text .form-class .text-box-wrapper .dob {
+.register-wrapper .form-class .text-box-wrapper .date-wrapper .dob {
   font-size: large;
-  background-color: white;
-  border-bottom: 2px solid black;
+  background-color: #ffffff;
+  /* border-bottom: 2px solid black; */
   padding: 13px;
-  width: 25%;
+  width: 50%;
 }
-.Register-header .register-text .form-class .text-box-wrapper .dob-label {
+.register-wrapper .form-class .text-box-wrapper .date-wrapper .dob-label {
   border: none;
   border-bottom: 2px solid black;
   padding: 15px;
-  background-color: white;
+  background-color: #ffffff;
   color: gray;
   font-size: large;
   margin: 5px;
-  width: 25%;
+  width: 50%;
 }
-.Register-header .register-text .form-class .text-box-wrapper input[type=text], input[type=password] {
+.register-wrapper .form-class .text-box-wrapper .date-wrapper {
+  margin: 0px auto;
+  display: flex;
+  width: 50%;
+}
+.register-wrapper .form-class .text-box-wrapper input[type=text], input[type=password] {
   border: none;
   border-bottom: 2px solid black;
+  background-color: #ffffff;
   padding: 15px;
   font-size: large;
   width: 50% !important;
-  margin: 5px;
+  margin: 0px auto;
 }
-.Register-header .register-text .form-class .text-box-wrapper label {
+.register-wrapper .form-class .text-box-wrapper label {
   color: black;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 30px;
+  display: block;
+  width: 50%;
+  margin: 0px auto;
 }
-.Register-header .register-text .form-class .text-box-wrapper .eye-icon {
+.register-wrapper .form-class .text-box-wrapper .role-wrapper {
+  width: 50%;
+  margin: 0px auto;
+  display: flex;
+}
+.register-wrapper .form-class .text-box-wrapper .role-wrapper label {
+  color: black;
+  background-color: transparent;
+  font-size: 30px;
+  display: block;
+  width: 50%;
+  margin: 0px auto;
+}
+.register-wrapper .form-class .text-box-wrapper .role-wrapper label input[type=checkbox], input[type=radio] {
+  margin: 15px;
+}
+.register-wrapper .form-class .text-box-wrapper .eye-icon {
   position: absolute;
-  top: 80px;
-  font-size: 40px;
+  top: 25%;
+  right: 20%;
+  font-size: 30px;
 }
-.Register-header .register-text .form-class .button {
+.register-wrapper .form-class .button {
   display: block;
     border-radius: 4px;
     background-color: black;
@@ -1178,16 +1244,16 @@ label {
     cursor: pointer;
     margin: 35px 40%;
 }
-.Register-header .register-text .form-class .button-disabled {
+.register-wrapper .form-class .button-disabled {
   background-color: grey !important;
 }
-.Register-header .register-text .form-class .button span {
+.register-wrapper .form-class .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-.Register-header .register-text .form-class .button span:after {
+.register-wrapper .form-class .button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -1195,10 +1261,10 @@ label {
   right: -20px;
   transition: 0.5s;
 }
-.Register-header .register-text .form-class .button:hover span {
+.register-wrapper .form-class .button:hover span {
   padding-right: 25px;
 }
-.Register-header .register-text .form-class .button:hover span:after {
+.register-wrapper .form-class .button:hover span:after {
   opacity: 1;
   right: 0;
 }
