@@ -92,7 +92,7 @@ code {
 .section{
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   grid-gap: 50px;
   padding: 50px;
 }

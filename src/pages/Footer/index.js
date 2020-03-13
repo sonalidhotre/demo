@@ -11,20 +11,10 @@ class Footer extends Component {
           <div className="footer-contact-wrapper">
             <div className="footer-contact">
               <div>
-                <img className="avatar" src={require("../../images/avatar1.jpg")} alt="avatar1" height="100px"/>
+                <img className="avatar" src={require("../../images/Avatar.JPG")} alt="avatar1" height="100px"/>
               </div>
-              <div>दर्शन महेश धोत्रे</div>
-              <div>dmdhotre99@gmail.com</div>
-              <div>९०४९२४२२७०</div>
-            </div>
-          </div>
-          <div className="footer-contact-wrapper">
-            <div className="footer-contact">
-              <div>
-                <img className="avatar" src={require("../../images/avatar2.jpg")} alt="avatar2" height="100px"/>
-              </div>
-              <div>दर्शन महेश धोत्रे</div>
-              <div>dmdhotre99@gmail.com</div>
+              <div>सोनाली महेश धोत्रे</div>
+              <div>smdhotre123@gmail.com</div>
               <div>९०४९२४२२७०</div>
             </div>
           </div>
