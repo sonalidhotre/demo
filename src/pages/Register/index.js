@@ -119,37 +119,54 @@ class Register extends Component {
         return false
       }
     } else if (this.state.form === 3) {
-      if (this.state.motherfname === '') {
-        document.getElementById('motherfname').focus()
-        toast.error("विद्यार्थ्यांचा आईचे प्रथम नाव भरणे अनिवार्य आहे.")
-        return false
-      } else if (this.state.motherlname === '') {
-        document.getElementById('motherlname').focus()
-        toast.error("विद्यार्थ्यांचा आईचे आडनाव भरणे अनिवार्य आहे.")
-        return false
-      } if (this.state.fatherfname === '') {
-        document.getElementById('fatherfname').focus()
-        toast.error("विद्यार्थ्यांचा वडिलांचे प्रथम नाव भरणे अनिवार्य आहे.")
-        return false
-      } else if (this.state.fatherlname === '') {
-        document.getElementById('fatherlname').focus()
-        toast.error("विद्यार्थ्यांचा वडिलांचे आडनाव भरणे अनिवार्य आहे.")
-        return false
-      } else if (this.state.uname === '') {
+      if (this.state.roles.includes("student")) {
+        if (this.state.motherfname === '') {
+          document.getElementById('motherfname').focus()
+          toast.error("विद्यार्थ्यांचा आईचे प्रथम नाव भरणे अनिवार्य आहे.")
+          return false
+        } else if (this.state.motherlname === '') {
+          document.getElementById('motherlname').focus()
+          toast.error("विद्यार्थ्यांचा आईचे आडनाव भरणे अनिवार्य आहे.")
+          return false
+        } if (this.state.fatherfname === '') {
+          document.getElementById('fatherfname').focus()
+          toast.error("विद्यार्थ्यांचा वडिलांचे प्रथम नाव भरणे अनिवार्य आहे.")
+          return false
+        } else if (this.state.fatherlname === '') {
+          document.getElementById('fatherlname').focus()
+          toast.error("विद्यार्थ्यांचा वडिलांचे आडनाव भरणे अनिवार्य आहे.")
+          return false
+        } else if (this.state.motheremail === '') {
+          document.getElementById('motheremail').focus()
+          toast.error("विद्यार्थ्यांचा आईचा इमेल भरणे अनिवार्य आहे.")
+          return false
+        } else if (this.state.fatheremail === '') {
+          document.getElementById('fatheremail').focus()
+          toast.error("विद्यार्थ्यांचा वडिलांचा इमेल भरणे अनिवार्य आहे.")
+          return false
+        } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.motheremail))) {
+          document.getElementById('motheremail').focus()
+          toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
+          return false
+        } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.fatheremail))) {
+          document.getElementById('fatheremail').focus()
+          toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
+          return false
+        }
+      } else if(this.state.roles.includes("teacher")){
+        if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.email))) {
+          document.getElementById('email').focus()
+          toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
+          return false
+        } else if (this.state.email === '') {
+          document.getElementById('email').focus()
+          toast.error("इमेल भरणे अनिवार्य आहे.")
+          return false
+        }
+      }
+      if (this.state.uname === '') {
         document.getElementById('uname').focus()
         toast.error("वापरकर्तानाव भरणे अनिवार्य आहे.")
-        return false
-      } else if (this.state.motheremail === '') {
-        document.getElementById('motheremail').focus()
-        toast.error("विद्यार्थ्यांचा आईचा इमेल भरणे अनिवार्य आहे.")
-        return false
-      } else if (this.state.fatheremail === '') {
-        document.getElementById('fatheremail').focus()
-        toast.error("विद्यार्थ्यांचा वडिलांचा इमेल भरणे अनिवार्य आहे.")
-        return false
-      } else if (this.state.email === '') {
-        document.getElementById('email').focus()
-        toast.error("इमेल भरणे अनिवार्य आहे.")
         return false
       } else if (this.state.password === '') {
         document.getElementById('password').focus()
@@ -162,19 +179,7 @@ class Register extends Component {
       } else if (this.state.password !== this.state.confirmPass) {
         toast.error("हे पासवर्ड जुळत नाहीत कृपया पुन्हा प्रयत्न करा.")
         return false
-      } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.motheremail))) {
-        document.getElementById('motheremail').focus()
-        toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
-        return false
-      } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.fatheremail))) {
-        document.getElementById('fatheremail').focus()
-        toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
-        return false
-      } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(this.state.email))) {
-        document.getElementById('email').focus()
-        toast.error("टाईए केलेला इमेल आयडी योग्य नाही")
-        return false
-      }
+      } 
     }
     return true
   }
